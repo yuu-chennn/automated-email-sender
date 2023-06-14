@@ -1,0 +1,93 @@
+@import "palette.scss";
+
+@function color($color, $tone){
+
+    //@warn map-get($light,$color);
+
+    @if map-has-key($light,$color){
+        $color: map-get($light,$color);
+
+            @if map-has-key($color,$tone){
+                $tone: map-get($color,$tone);
+                @return $tone;
+            }
+
+            @warn "unknown tone `#{$tone}` in color";
+            @return null;        
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+   
+}
+
+@mixin section-divider($color) {
+    background-color: color($color, 'light');
+    margin: 30px;
+    padding-top: 250px;
+    padding-left: 15px;
+    box-align: left;
+    // add flex layout
+}
+@mixin section-container($color) {
+    background-color: color($color, 'light');
+    margin: 30px;
+    box-align: left;
+    // add flex layout
+}
+
+@mixin text($color) {
+    color: color($color, 'darker');
+    text-align: left;
+    padding-top: 250px;
+    padding-left: 15px;
+}
+
+.page-background {
+    background-color: color('yellow', 'lighter');
+}
+
+.section-container {
+    @include section-container('blue');
+    
+    .title {
+        @include text('blue');
+        font-size: 120px;
+        padding-left: 15px;
+        padding-top: 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+
+.section-container {
+    @include section-container('yellow');
+    
+    .description {
+        padding-left: 15px;
+        padding-top: 0px;
+    }
+    
+    .styled-paragraph {
+        font-size: medium;
+        font-family:'Gill Sans', 'Gill Sans MT';
+        padding-left: 15px;
+    }
+
+    .styled-list {
+    padding-left: 15px;
+    list-style-type: square;
+    list-style-position: inside;
+    
+        li {
+            margin-bottom: 10px;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+a {
+    color: #9E9E9E;
+}

@@ -1,0 +1,71 @@
+/* PALETTE */
+
+/* LIGHT MODE - CUSTOM 3 COLOR THEME */
+/* Palette URL: http://paletton.com/#uid=33r0v0kiRH800++aaTTq3vivAiW */
+$light: (
+    /* Main Primary color */
+    'blue': (
+        'lighter': #FFFFFF, 
+        'light': #A3D5EA,
+        'base': #56A3C4,
+        'dark': #23789D,
+        'darker': #05445F
+    ),
+    /* Main Secondary color (1) */
+    'yellow': (
+        'lighter': #FFFFFF, 
+        'light': #FFE8AE, 
+        'base': #FFD569,
+        'dark': #F9C02E,
+        'darker': #976D02
+    ),
+    /* Main Secondary color (2) */
+    'red': (
+        'lighter': #FFFFFF,
+        'light': #FFBCAE,
+        'base': #FF8369,
+        'dark': #F9522E,
+        'darker': #971C02
+    )
+);
+/* DARK MODE - CUSTOM 3 COLOR THEME */
+// Palette URL: http://paletton.com/#uid=33A1a0kj-ej9qLNeEmXpW7FEO1b */
+$dark: (
+    /* Main Primary color */
+    dm-blue: (
+        lighter: #9BB7D5,
+        light: #455D77,
+        base: #20354A,
+        dark: #0A1928,
+        darker: #000306
+    ),
+    /* Main Secondary color (1) */
+    dm-yellow: (
+        lighter: #FAFEB3,
+        light: #B1B562,
+        base: #6D712C,
+        dark: #3A3C0B,
+        darker: #090900 
+    ),
+    /* Main Secondary color (2) */
+    dm-pink: (
+        lighter: #EBA6C6,
+        light: #995374,
+        base: #5F2540,
+        dark: #330A1D,
+        darker: #080004
+    )
+)
+
+
+// dark mode - contrast theme
+
+// dark mode - unified theme
+
+// dark mode - blue accented
+
+// dark mode - cool grey
+
+// dark mode - warm grey
+
+
