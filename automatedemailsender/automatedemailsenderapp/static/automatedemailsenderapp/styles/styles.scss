@@ -1,0 +1,48 @@
+@import "themes.css";
+@import "mixins.scss";
+
+html {
+    background-size: cover;
+    background-color: var(--accent);
+    margin-top: -17px;
+    margin-bottom: -17px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+p {
+    @include normal-text();
+}
+
+ul {
+    padding-left: 15px;
+    list-style-type: square;
+    list-style-position: inside;
+    @include normal-text();
+    
+    li {
+        margin-bottom: 10px;
+    }
+    li:last-child {
+        margin-bottom: 5px;
+    }
+}
+
+.text-highlight {
+    color: var(--accent);
+}
+
+footer {
+    @include normal-text();
+    @include row-container();
+    background-color: var(--tone);
+    text-align: center;
+    p { 
+        padding: 0px;
+    }
+
+    a {
+        color: var(--text);
+        text-decoration: none;
+    }
+}

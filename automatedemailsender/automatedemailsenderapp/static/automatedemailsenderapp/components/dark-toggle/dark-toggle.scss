@@ -1,0 +1,52 @@
+/* Toggle between dark and light mode */
+.dark-toggle {
+    float: right;
+    display: block;
+    color: var(--text);
+    text-align: center;
+    text-decoration: none;
+    
+    input[type=checkbox] {
+        display: none;
+    }
+
+    label {
+        background-color: var(--bg2);
+        border: 2px solid var(--accent);
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: all ease-in-out 0.3s;
+        margin-top: 16px;
+        padding: 16px 16px;
+        width: 60px;
+        height: 20px;
+    
+        ::after {
+            background-color: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: all ease-in-out 0.3s;
+            margin-top: 16px;
+            padding: 16px 16px;
+            width: 16px;
+            height: 16px;
+            content: ' ';
+        }
+    }
+    
+    input[type=checkbox]:checked ~ label {
+        background-color: var(--shadow);
+        border-color: var(--accent);
+    
+        ::after {
+            background-color: var(--accent);
+            transform: translateX(40px);
+        }
+    }
+}

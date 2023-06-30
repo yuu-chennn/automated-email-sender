@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: baseline;
+    row-gap: 20px;
+    column-gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .f-item {
+        box-sizing: border-box;
+        background-color: var(--bg2);
+        box-shadow: -2px 2px 2px var(--accent);
+        border-radius: 15px;
+        width: 24vi;
+        min-width: 250px;
+        
+        h3 {
+            @include h3-text();
+        }
+    
+        p {
+            text-align: center;
+        }
+        
+        // add responsive media queries for images
+    }   
+}

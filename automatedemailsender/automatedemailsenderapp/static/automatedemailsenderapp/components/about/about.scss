@@ -1,0 +1,13 @@
+
+/* About */
+#about {
+    @include row-container();
+    height: 90vh;
+    background-color: var(--bg2);
+
+    h2 {
+        @include h2-text();
+        text-align: left;
+        padding-top: 25px;
+    }
+}

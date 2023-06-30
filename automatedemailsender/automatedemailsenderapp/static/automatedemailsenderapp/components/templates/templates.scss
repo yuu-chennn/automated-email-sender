@@ -1,0 +1,18 @@
+
+/* Templates */
+#templates {
+    @include row-container();
+    height: 150vh;
+
+    h2 {
+        @include h2-text();
+        text-align: right;
+        padding-top: 25px;
+    }
+    p {
+        text-align: right;
+    }
+    .flex-container .f-item .f-item-container p {
+        text-align: center;
+    }
+}
