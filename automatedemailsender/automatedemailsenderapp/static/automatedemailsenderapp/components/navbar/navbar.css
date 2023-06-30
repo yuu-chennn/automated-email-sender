@@ -1,0 +1,32 @@
+/* Navigation Bar */
+.navbar {
+  background-color: var(--tone);
+  height: 46px;
+  overflow: hidden;
+  /* Style navigation bar links */
+  /* Change color on hover */
+  /* Highlight current page */
+  /* Hide the link that should open and close the topnav on small screens */
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: var(--text);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: var(--accent);
+  color: var(--text2);
+}
+.navbar a.active {
+  background-color: var(--bg2);
+  color: var(--accent);
+}
+.navbar .icon {
+  display: none;
+}
+
+/*# sourceMappingURL=navbar.css.map */

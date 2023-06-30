@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "base/flex-container.css";
+@import "base/media.css";
+@import "base/mixins.css";
+@import "base/styles.css";
+@import "base/themes.css";
+
+@import "tailwindcss/components";
+@import "components/home/home.css";
+@import "components/navbar/navbar.css";
+@import "components/dark-toggle/dark-toggle.css";
+@import "components/about/about.css";
+@import "components/templates/templates.css";
+@import "components/contact-us/contact-us.css";
+
+@import "tailwindcss/utilities";
+/*
+@import "./custom-utilities.css";
+*/
