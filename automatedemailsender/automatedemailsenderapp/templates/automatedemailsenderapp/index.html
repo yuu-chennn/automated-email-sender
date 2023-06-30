@@ -3,26 +3,89 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Automated Email Sender</title>
         <link href="{% static 'automatedemailsenderapp/light.css' %}" rel="stylesheet">
-        <script src="myscripts.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <container id="page-background">
-            <div class="section-container" id="title">
-                <h1 class="title">Automated Email Sender</h1>
-            </div>
-            <div class="section-container" id="about">
-                <container class="description">
-                    <p class="styled-paragraph">A user-friendly web application to help you <b>automate sending emails to large audiences.</b></p>
-                    <ul class="styled-list">
-                        <li>Greet new <b>clients</b> with a warm <b>welcome</b></li>
-                        <li>Update <b>followers</b> with your <b>weekly newsletter</b></li>
-                        <li>Shoot <b>cold emails</b> to <b>hiring managers</b></li>
-                    </ul>
-                </container>
-            </div>
-        </container>
+        <main>
+            <container class="page-background">
+                <div class="navbar">
+                    <container class="navbar-container">
+                        <a href="#home" class="active">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#templates">Templates</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                             <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="toggle">
+                            <input type="checkbox" class="dark-toggle"/>
+                            <label for="toggle"></label>
+                        </div>
+                    </container>
+                </div>
+            
+                <div class="title">
+                    <container class="title-container">
+                        <h1>Automated <br> <span class="text-highlight">Email Sender</span></h1>
+                        
+
+                    </container>
+                </div>
+
+                <div class="row" id="about">
+                    <container class="row-container" id="about">
+                        <h2>Stop <br> <span class="text-highlight">Duplicating</span></h2>
+                        <p>A user-friendly web application <br> to help you <b>automate sending emails to large audiences.</b></p>
+                        <ul class="styled-list">
+                            <li>Greet new <b>clients</b> with a warm <b>welcome</b></li>
+                            <li>Update <b>followers</b> with your <b>weekly newsletter</b></li>
+                            <li>Shoot <b>cold emails</b> to <b>hiring managers</b></li>
+                        </ul> 
+                        <img src="images/mass-email-icon.jpeg" class="img-responsive" alt="Mass-Email-Icon"/>
+                    </container>
+                </div>
+                
+                <div class="row" id="templates">
+                    <container class="row-container" id="templates">
+                        <h2><span class="text-highlight">Templates</span></h2>
+                        <p>Explore our curated email templates to cater to all your needs.</p>
+                        
+                        <container class="flex-container">
+                            <div class="f-item" id="business">
+                               
+                                <container class="f-item-container" id="business">
+                                     <h3>Marketing your Business</h3>
+                                     <p>qwertyuiop</p>
+                                </container>
+                            </div>
+
+                            <div class="f-item" id="newsletter">
+                                <h3>Weekly Newsletter</h3>
+                                <container class="f-item-container" id="newsletter">
+                                    <p>asdfghjkl</p>
+                                </container>
+                            </div>
+                            
+                            <div class="f-item" id="job">
+                                <h3>Job Search</h3>
+                                <container class="f-item-container" id="job">
+                                    <p>zxcvbnm</p>
+                                </container>
+                            </div>
+                        </class>
+                    </container>
+                </div>
+            </container>
+        </main>
+        <script src="{% static 'automatedemailsenderapp/dark-mode-toggle.js' %}"></script>
     </body>
     <footer class="footer">
         <p>
@@ -34,4 +97,5 @@
         <p>
             This site was built with <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django</a>
         </p>
+    </footer>
 </html>

@@ -1,0 +1,257 @@
+@import "themes.css";
+@import "mixins.scss";
+
+/* ================ LAYOUT ================================================= */
+/* Navigation Bar */
+.navbar {
+    background-color: var(--tone);
+    height: 46px;
+    overflow: hidden;
+  
+    /* Style navigation bar links */
+     a {
+        float: left;
+        display: block;
+        color: var(--text);
+        text-align: center;
+        padding: 16px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+  
+    /* Change color on hover */
+    a:hover {
+        background-color: var(--accent);
+        color: var(--text2);
+    }
+
+    /* Highlight current page */
+    a.active {
+        background-color: var(--bg2);
+        color: var(--accent);
+    }
+
+    /* Hide the link that should open and close the topnav on small screens */
+    .icon {
+        display: none;
+    }
+}
+
+/* Toggle between dark and light mode */
+.dark-toggle {
+    float: right;
+    display: block;
+    color: var(--text);
+    text-align: center;
+    text-decoration: none;
+    
+    input[type=checkbox] {
+        display: none;
+    }
+
+    label {
+        background-color: var(--bg2);
+        border: 2px solid var(--accent);
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: all ease-in-out 0.3s;
+        margin-top: 16px;
+        padding: 16px 16px;
+        width: 60px;
+        height: 20px;
+    
+        ::after {
+            background-color: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: all ease-in-out 0.3s;
+            margin-top: 16px;
+            padding: 16px 16px;
+            width: 16px;
+            height: 16px;
+            content: ' ';
+        }
+    }
+    
+    input[type=checkbox]:checked ~ label {
+        background-color: var(--shadow);
+        border-color: var(--accent);
+    
+        ::after {
+            background-color: var(--accent);
+            transform: translateX(40px);
+        }
+    }
+}
+
+/* Title */
+.title { 
+    @include row-container();
+    height: 90vh;
+
+    h1 {
+        @include h1-text();
+    }
+}
+
+/* About */
+#about {
+    @include row-container();
+    height: 90vh;
+    background-color: var(--bg2);
+
+    h2 {
+        @include h2-text();
+        text-align: left;
+        padding-top: 25px;
+    }
+}
+
+/* Templates */
+#templates {
+    @include row-container();
+    height: 150vh;
+
+    h2 {
+        @include h2-text();
+        text-align: right;
+        padding-top: 25px;
+    }
+    p {
+        text-align: right;
+    }
+    .flex-container .f-item .f-item-container p {
+        text-align: center;
+    }
+}
+
+/* Footer */
+footer {
+    @include normal-text();
+    @include row-container();
+    background-color: var(--tone);
+    text-align: center;
+    p { 
+        padding: 0px;
+    }
+
+    a {
+        color: var(--text);
+        text-decoration: none;
+    }
+}
+
+/* ================ GENERAL ================================================= */
+html {
+    background-size: cover;
+    background-color: var(--accent);
+    margin-top: -17px;
+    margin-bottom: -17px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+p {
+    @include normal-text();
+}
+
+ul {
+    padding-left: 15px;
+    list-style-type: square;
+    list-style-position: inside;
+    @include normal-text();
+    
+    li {
+        margin-bottom: 10px;
+    }
+    li:last-child {
+        margin-bottom: 5px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: baseline;
+    row-gap: 20px;
+    column-gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .f-item {
+        box-sizing: border-box;
+        background-color: var(--bg2);
+        box-shadow: -2px 2px 2px var(--accent);
+        border-radius: 15px;
+        width: 24vi;
+        min-width: 250px;
+        
+        h3 {
+            @include h3-text();
+        }
+    
+        p {
+            text-align: center;
+        }
+        
+        // add responsive media queries for images
+    }   
+}
+
+.text-highlight {
+    color: var(--accent);
+}
+
+/* ================ MEDIA ================================================= */
+/* Adjusting for different viewports */
+/* Small: smaller than 640px */
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p ul li {
+        font-size: 1rem;
+    }
+} 
+
+ /* Medium: 641px to 1007px */
+ @media screen and (min-width: 641px) and (max-width: 1007px) {
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+      font-size: 60px;
+    }
+    p ul li {
+        font-size: 1rem;
+    }
+  } 
+
+/* Large: 1008px and larger */
+@media screen and (min-width: 1008px) {
+    h1 {
+        font-size: 105px;
+    }
+    h2 {
+      font-size: 70px;
+    }
+    p ul li {
+        font-size: 1.75rem;
+    }
+}
+
+/* Change Responsive TopNav to Menu Icon to Menu Page */
+/* Screen Width: <559px*/
+@media screen and (max-width:559px) {
+    
+} 

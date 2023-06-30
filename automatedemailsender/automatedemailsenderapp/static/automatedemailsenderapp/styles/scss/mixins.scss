@@ -1,0 +1,57 @@
+/* preset - row container */
+@mixin row-container() {
+    background-color: var(--bg);
+    margin-left: 40px;
+    margin-right: 40px;
+    box-align: left;
+    box-sizing: border-box;
+    z-index: 1;
+    min-width: 312px;
+    overflow: hidden;
+} 
+
+/* preset - title text */
+@mixin h1-text() {
+    color: var(--text);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15vh;
+    overflow: hidden;
+    //margin-top: 500px; // BUG: top margins not responding properly
+}
+
+/* preset - heading text */
+@mixin h2-text() {
+    color: var(--text);
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Lora', serif;
+    overflow : hidden;
+}
+
+/* preset - secondary heading text */
+@mixin h3-text() {
+    color: var(--shadow);
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+/* preset - normal text */
+@mixin normal-text() {
+    color: var(--shadow);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: medium;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}

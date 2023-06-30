@@ -1,0 +1,31 @@
+:root {
+    --bg: hsla(46, 26%, 92%, 1);
+    --bg2: hsla(46, 16%, 89%, 1);
+    --tone: hsla(38, 16%, 70%, 1);
+    --shadow: hsla(34, 6%, 24%, 1);
+    --text2: hsla(40, 5%, 17%, 1);
+    --text: hsla(40, 4%, 14%, 1);
+    --accent: hsla(17, 83%, 54%, 1);
+}
+
+/* Light - Professional Contrast Coral */
+html[data-theme='light'] {
+    --bg: hsla(46, 26%, 92%, 1);
+    --bg2: hsla(46, 16%, 89%, 1);
+    --tone: hsla(38, 16%, 70%, 1);
+    --shadow: hsla(34, 6%, 24%, 1);
+    --text2: hsla(40, 5%, 17%, 1);
+    --text: hsla(40, 4%, 14%, 1);
+    --accent: hsla(17, 83%, 54%, 1);
+}
+
+/* Dark - Professional Contrast Coral */
+html[data-theme='dark'] {
+    --text: hsla(46, 100%, 97%, 1);
+    --text2: hsla(46, 50%, 92%, 1);
+    --shadow: hsla(38, 16%, 76%, 1);
+    --tone: hsla(38, 10%, 26%, 1);
+    --bg2: hsla(40, 5%, 17%, 1);
+    --bg: hsla(40, 4%, 14%, 1);
+    --accent: hsla(17, 83%, 54%, 1);
+}
