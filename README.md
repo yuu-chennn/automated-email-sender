@@ -4,9 +4,9 @@
 - Update **followers** with your **weekly newsletter**
 - Shoot **cold emails** to **hiring managers**
 
- ## Features in v1.0
+ ## Features
  
- ### Available now:
+ ### To to be finalised in v1.0
  - Create contact lists for each targeted audience group.
  - Create your own message template.
  - Customise each email with the receiver's name by just uploading a spreadsheet.
